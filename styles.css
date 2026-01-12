@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* FULLSCREEN MAP */
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+/* BOTTOM PANEL */
+.bottom-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 22px 22px 0 0;
+  padding: 16px;
+  z-index: 2;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* INPUT + BUTTON */
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #d32f2f;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #d32f2f;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#status {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 6px;
+  color: #b71c1c;
+}
+
+/* AVATAR MARKERS */
+.avatar-marker {
+  background: transparent;
+  border: none;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+/* Avatar colors */
+.avatar.red { background: #d32f2f; }
+.avatar.blue { background: #1e88e5; }
+.avatar.green { background: #43a047; }
+.avatar.orange { background: #fb8c00; }
+.avatar.purple { background: #8e24aa; }
+.avatar.pink { background: #ec407a; }
+
+/* SPLASH SCREEN */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: #ffffff; /* WHITE background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#splash img {
+  width: 120px;
+  animation: fadePulse 1.4s ease-in-out infinite;
+}
+
+/* Fade out */
+#splash.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* logo animation */
+@keyframes fadePulse {
+  0% { opacity: 0.6; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.6; transform: scale(0.98); }
+}
+
+
+/* SOS BUTTON */
+#sosBtn {
+  pointer-events: auto;
+  position: absolute;
+  bottom: 235px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: auto !important;   
+  min-width: unset !important;
+
+  padding: 6px 12px;
+  height: 26px;
+  border-radius: 999px;
+
+  border: 1.5px solid #d32f2f;
+  background: #ffffff;
+  color: #d32f2f;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+
+#sosBtn:active {
+  transform: translateX(-50%) scale(0.94);
+}
+
+/* CHECK-IN BUTTON (SMALL GREEN PILL) */
+#checkBtn {
+  pointer-events: auto;
+  position: absolute;
+  bottom: 235px;
+  right: 18px;
+
+  width: auto !important;
+  min-width: unset !important;
+
+  padding: 6px 12px;
+  height: 26px;
+  border-radius: 999px;
+
+  border: 1.5px solid #2e7d32;
+  background: #ffffff;
+  color: #2e7d32;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+
+#checkBtn:active {
+  transform: scale(0.94);
+}
+
+
+

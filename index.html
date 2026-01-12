@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CHIPME – Live GPS Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+  <main class="app">
+
+    <!-- MAP -->
+    <div id="map"></div>
+    
+    <!-- SOS BUTTON -->
+    <button id="sosBtn">SOS</button>
+    <button id="checkBtn" title="Check-in">CHECK-IN</button>
+
+    <!-- BOTTOM PANEL -->
+    <div class="bottom-panel">
+      <div class="brand">
+        <img src="logo.png" alt="CHIPME Logo" />
+        <div>
+          <h1>CHIPME</h1>
+          <p>Live GPS Tracking</p>
+        </div>
+      </div>
+
+      <input id="username" placeholder="Your name" />
+      <button id="startBtn">Start Sharing Location</button>
+      <p id="status">Not tracking</p>
+    </div>
+  </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- Your App Logic -->
+  <script src="app.js"></script>
+
+  </body>
+  </html>
